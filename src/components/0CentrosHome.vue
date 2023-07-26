@@ -113,13 +113,13 @@ export default {
         ubicacion: "" /* Restablece los valores del formulario */,
       };
     },
-    editarCentro(index) {
-      // Lógica para editar un centro según su índice en el array de centros
-      // Puedes abrir un modal o redirigir a una página de edición
-    },
-    eliminarCentro(index) {
-      this.centros.splice(index, 1); // Elimina el centro según su índice en el array de centros
-    },
+    // editarCentro(index) {
+    //   // Lógica para editar un centro según su índice en el array de centros
+    //   // Puedes abrir un modal o redirigir a una página de edición
+    // },
+    // eliminarCentro(index) {
+    //   this.centros.splice(index, 1); // Elimina el centro según su índice en el array de centros
+    // },
   },
 };
 </script>

@@ -1,4 +1,16 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import { createRouter, createWebHistory } from 'vue-router';
+import ActividadesIaa from './components/ActividadesIaa.vue';
 
-createApp(App).mount('#app')
+const routes = [
+  { path: '/', component: ActividadesIaa },
+];
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
+
+const app = createApp(ActividadesIaa);
+app.use(router);
+app.mount('#app');
