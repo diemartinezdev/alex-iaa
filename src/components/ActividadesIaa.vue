@@ -39,7 +39,7 @@
     </div>
 
     <div>
-      <button @click="mostrarFormulario = true">Agregar Actividad</button>
+      <button v-if="!mostrarFormulario" @click="mostrarFormulario = true">Agregar Actividad</button>
       <div id="form-agregar" v-if="mostrarFormulario">
         <h3>Nueva actividad</h3>
         <!-- Formulario para agregar una actividad  -->
@@ -121,6 +121,7 @@
             </li>
           </ul>
           <button type="submit">Agregar</button>
+          <button @click="cancelarAgregarActividad">Cancelar</button>
         </form>
       </div>
     </div>
@@ -250,6 +251,9 @@ export default {
         valoracion: "",
         tiempo: "" /* Restablece los valores del formulario */,
       };
+    },
+    cancelarAgregarActividad() {
+      this.mostrarFormulario = false;
     },
     editarActividad(index) {
       // Obtiene la actividad según el índice (ID único)
